@@ -1,4 +1,4 @@
-import { GetTagsAsText, GetWordsAndRepetitions, GetBody } from '../js/functions.js';
+import { GetTagsAsText, GetWordsAndRepetitions, GetBody } from '../dist/functions.js';
 
 describe('Get most common words', () => {
     test('get words', () => {

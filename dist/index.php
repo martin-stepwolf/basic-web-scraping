@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <title>Basic Web Scraping</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
                         </p>
                 </div>
         </main>
-        <script type="module" src="js/index.js"></script>
+        <script type="module" src="main.js"></script>
 </body>
 
 </html>
