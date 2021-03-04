@@ -1,4 +1,4 @@
-import { RemoveHtmlCode, ClearInfo, ReplaceCharacters, DeleteWords } from '../dist/filters';
+import { RemoveHtmlCode, ClearInfo, ReplaceCharacters, DeleteWords } from '../src/filters';
 
 describe('Remove HTML code', () => {
     test('delete css tags and its content', () => {

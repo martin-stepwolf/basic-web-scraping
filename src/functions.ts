@@ -1,4 +1,6 @@
-export const GetTagsAsText = (data) => {
+import { Word } from './word'
+
+export function GetTagsAsText(data: string): string {
     let regex = /\<([a-z0-9]+).*?\>/gms;
     const completed_tags = [...data.matchAll(regex)];
     // BUG: at this point the text cannot work with matchAll()
@@ -11,13 +13,13 @@ export const GetTagsAsText = (data) => {
     return string_tags;
 }
 
-export const GetWordsAndRepetitions = (data) => {
+export function GetWordsAndRepetitions(data: string): Word[] {
     
-    data = data.trim().split(' ');
+    let dataArray = data.trim().split(' ');
     let words = {};
 
     // create an object {word_1:times_1, word_n:times_n}
-    data.forEach( ( word ) => {
+    dataArray.forEach( ( word ) => {
         words[ word ] = ( words[ word ] || 0 ) + 1;
       });
 
@@ -37,7 +39,7 @@ export const GetWordsAndRepetitions = (data) => {
     return words_array;
 }
 
-export const GetBody = (data) => {
+export function GetBody(data: string): string {
     // Get just the content in the body tag
     const regex_body = /(\<body.*?\/?\>(.|\n)*\<\/body>)/gms;
     let head_data = data.match(regex_body)[0];

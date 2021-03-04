@@ -1,5 +1,5 @@
-import { RemoveHtmlCode, ClearInfo, ReplaceCharacters, DeleteWords } from '../dist/filters';
-import { GetTagsAsText, GetWordsAndRepetitions, GetBody } from '../dist/functions.js';
+import { RemoveHtmlCode, ClearInfo, ReplaceCharacters, DeleteWords } from '../src/filters';
+import { GetTagsAsText, GetWordsAndRepetitions, GetBody } from '../src/functions';
 
 const html_code_example = `
 <html>

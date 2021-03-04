@@ -1,4 +1,4 @@
-export const RemoveHtmlCode = (htmlCode) => {
+export function RemoveHtmlCode(htmlCode:string): any {
 
     let data = htmlCode.replace(/\<script.*?\>.*?\<\/script\>/gms, " ");
     //"Removes the data in script tags and the tags "
@@ -22,7 +22,7 @@ export const RemoveHtmlCode = (htmlCode) => {
     return data;
 }
 
-export const ClearInfo = (text) => {
+export function ClearInfo(text:string): string {
 
     let data = text.replace(/\W/g, " ");
     //"Delete no words, number or any no word"
@@ -45,7 +45,7 @@ export const ClearInfo = (text) => {
     return data;
 }
 
-export const ReplaceCharacters = (words) => {
+export function ReplaceCharacters(words: string): string {
     let data = words.replace(/[âäàåá]/gi, "a");
     data = data.replace(/[êëèé]/gi, "e");
     data = data.replace(/[ïîìí]/gi, "i");
@@ -56,7 +56,7 @@ export const ReplaceCharacters = (words) => {
     return data;
 }
 
-export const DeleteWords = (data) => {
+export function DeleteWords(data: string): string {
     const words = [
         // TODO: check well the common words with an investigation
         // spanish
